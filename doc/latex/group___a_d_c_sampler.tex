@@ -1,0 +1,116 @@
+\hypertarget{group___a_d_c_sampler}{}\section{A\+D\+C\+Sampler}
+\label{group___a_d_c_sampler}\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_d_c_sampler_ga4665f630da2d72cbf75619d63592daf9}{A\+D\+C\+State\+\_\+\+Typedef} \{ \hyperlink{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9aa37cde1dabf7658cc9bb359dc7ad7ce8}{A\+D\+C\+\_\+\+I\+D\+LE}, 
+\hyperlink{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a2842f316ee95b7800e3f9bb55d9c3bc1}{A\+D\+C\+\_\+\+B\+U\+SY}, 
+\hyperlink{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a7f2a1a2c5aece4f36847bf5cea31cd14}{A\+D\+C\+\_\+\+R\+E\+A\+DY}
+ \}\begin{DoxyCompactList}\small\item\em Determines the current operation state of the A\+DC Sampler task. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___a_d_c_sampler_gacdda0c0aba15f6b2d6275cc2afdc5a05}{A\+D\+C\+\_\+\+Service\+\_\+\+Setup} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes the internal A\+DC window buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___a_d_c_sampler_gaa2709405ead8733f44a8710753c55ca7}{A\+D\+C\+\_\+\+Get\+State} (void)
+\item 
+void \hyperlink{group___a_d_c_sampler_gac45a9f22b5b35c772350fd69097da95f}{A\+D\+C\+\_\+\+Set\+State} (uint8\+\_\+t state)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___a_d_c_sampler_ga4665f630da2d72cbf75619d63592daf9}\label{group___a_d_c_sampler_ga4665f630da2d72cbf75619d63592daf9}} 
+\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+State\+\_\+\+Typedef@{A\+D\+C\+State\+\_\+\+Typedef}}
+\index{A\+D\+C\+State\+\_\+\+Typedef@{A\+D\+C\+State\+\_\+\+Typedef}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}
+\subsubsection{\texorpdfstring{A\+D\+C\+State\+\_\+\+Typedef}{ADCState\_Typedef}}
+{\footnotesize\ttfamily enum \hyperlink{group___a_d_c_sampler_ga4665f630da2d72cbf75619d63592daf9}{A\+D\+C\+State\+\_\+\+Typedef}}
+
+
+
+Determines the current operation state of the A\+DC Sampler task. 
+
+A\+D\+C\+State\+\_\+\+Typedef \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+I\+D\+LE@{A\+D\+C\+\_\+\+I\+D\+LE}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+I\+D\+LE@{A\+D\+C\+\_\+\+I\+D\+LE}}}\mbox{\Hypertarget{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9aa37cde1dabf7658cc9bb359dc7ad7ce8}\label{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9aa37cde1dabf7658cc9bb359dc7ad7ce8}} 
+A\+D\+C\+\_\+\+I\+D\+LE&A\+DC Sampler task is in idle state (suspended) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+B\+U\+SY@{A\+D\+C\+\_\+\+B\+U\+SY}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+B\+U\+SY@{A\+D\+C\+\_\+\+B\+U\+SY}}}\mbox{\Hypertarget{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a2842f316ee95b7800e3f9bb55d9c3bc1}\label{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a2842f316ee95b7800e3f9bb55d9c3bc1}} 
+A\+D\+C\+\_\+\+B\+U\+SY&A\+DC Sampler task is in busy state (running) and a A\+DC Package is being read. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+D\+C\+\_\+\+R\+E\+A\+DY@{A\+D\+C\+\_\+\+R\+E\+A\+DY}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+R\+E\+A\+DY@{A\+D\+C\+\_\+\+R\+E\+A\+DY}}}\mbox{\Hypertarget{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a7f2a1a2c5aece4f36847bf5cea31cd14}\label{group___a_d_c_sampler_gga4665f630da2d72cbf75619d63592daf9a7f2a1a2c5aece4f36847bf5cea31cd14}} 
+A\+D\+C\+\_\+\+R\+E\+A\+DY&A\+DC Sampler task is finished reading a A\+DC Package window. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 22 of file adc.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___a_d_c_sampler_gaa2709405ead8733f44a8710753c55ca7}\label{group___a_d_c_sampler_gaa2709405ead8733f44a8710753c55ca7}} 
+\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+Get\+State@{A\+D\+C\+\_\+\+Get\+State}}
+\index{A\+D\+C\+\_\+\+Get\+State@{A\+D\+C\+\_\+\+Get\+State}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+Get\+State()}{ADC\_GetState()}}
+{\footnotesize\ttfamily uint8\+\_\+t A\+D\+C\+\_\+\+Get\+State (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+A\+D\+C\+\_\+\+Get\+State
+
+Returns the current state of operation for the A\+DC Sampler Task. \begin{DoxyReturn}{Returns}
+0 = A\+D\+C\+\_\+\+I\+D\+LE 
+
+1 = A\+D\+C\+\_\+\+B\+U\+SY 
+
+2 -\/ A\+D\+C\+\_\+\+R\+E\+A\+DY 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file adc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___a_d_c_sampler_gacdda0c0aba15f6b2d6275cc2afdc5a05}\label{group___a_d_c_sampler_gacdda0c0aba15f6b2d6275cc2afdc5a05}} 
+\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+Service\+\_\+\+Setup@{A\+D\+C\+\_\+\+Service\+\_\+\+Setup}}
+\index{A\+D\+C\+\_\+\+Service\+\_\+\+Setup@{A\+D\+C\+\_\+\+Service\+\_\+\+Setup}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+Service\+\_\+\+Setup()}{ADC\_Service\_Setup()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Service\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function initializes the internal A\+DC window buffer. 
+
+A\+D\+C\+\_\+\+Service\+\_\+\+Setup 
+
+Definition at line 25 of file adc\+\_\+service.\+c.
+
+
+
+References A\+D\+C\+\_\+\+I\+D\+LE.
+
+\mbox{\Hypertarget{group___a_d_c_sampler_gac45a9f22b5b35c772350fd69097da95f}\label{group___a_d_c_sampler_gac45a9f22b5b35c772350fd69097da95f}} 
+\index{A\+D\+C\+Sampler@{A\+D\+C\+Sampler}!A\+D\+C\+\_\+\+Set\+State@{A\+D\+C\+\_\+\+Set\+State}}
+\index{A\+D\+C\+\_\+\+Set\+State@{A\+D\+C\+\_\+\+Set\+State}!A\+D\+C\+Sampler@{A\+D\+C\+Sampler}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+Set\+State()}{ADC\_SetState()}}
+{\footnotesize\ttfamily void A\+D\+C\+\_\+\+Set\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{state }\end{DoxyParamCaption})}
+
+A\+D\+C\+\_\+\+Set\+State
+
+Changes the current state of operation for the A\+DC Sampler Task. 
+\begin{DoxyParams}{Parameters}
+{\em state} & 
+\begin{DoxyPre}
+                0 = ADC\_IDLE
+                1 = ADC\_BUSY
+                2 - ADC\_READY
+            \end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file adc\+\_\+service.\+c.
+

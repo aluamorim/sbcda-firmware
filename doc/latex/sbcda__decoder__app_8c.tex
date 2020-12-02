@@ -1,0 +1,40 @@
+\hypertarget{sbcda__decoder__app_8c}{}\section{src/app/sbcda\+\_\+decoder\+\_\+app.c File Reference}
+\label{sbcda__decoder__app_8c}\index{src/app/sbcda\+\_\+decoder\+\_\+app.\+c@{src/app/sbcda\+\_\+decoder\+\_\+app.\+c}}
+
+
+S\+B\+C\+DA Firmware Application.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S\+Config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}semphr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}app.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/mss\+\_\+gpio/mss\+\_\+gpio.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___s_b_c_d_a___a_p_p_gad2def83dd6929f8238ab553eed422d73}{sbcda\+\_\+decoder\+\_\+app} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+B\+C\+DA Firmware Application. 
+
+
+\begin{DoxyPre}
+ Creates the firmware`s tasks and starts the
+ FreeRTOS scheduler
+ Task priorities:
+    ADC\_Sampler\_Task    =   2
+    PTT\_Decoding\_Task   =   1
+    CMD\_Parser\_Task     =   1
+    Housekeeping\_Task   =   1\end{DoxyPre}
+
+
+
+\begin{DoxyPre} \end{DoxyPre}
+ \begin{DoxyAuthor}{Author}
+\+: Anderson Amorim 
+\end{DoxyAuthor}

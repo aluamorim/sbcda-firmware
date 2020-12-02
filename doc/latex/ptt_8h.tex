@@ -1,0 +1,65 @@
+\hypertarget{ptt_8h}{}\section{src/include/ptt.h File Reference}
+\label{ptt_8h}\index{src/include/ptt.\+h@{src/include/ptt.\+h}}
+{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$m2sxxx.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___p_t_t___service_gab50c3b95c842350db5767685feb81aa7}{P\+T\+T\+\_\+\+T\+O\+T\+A\+L\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+S\+I\+ZE}~54
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___p_t_t___service_ga26a2a479755f5b679cd4ac31c4f18452}{P\+T\+T\+Decode\+\_\+\+Status} \{ \newline
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452a0c6a2cf2466fedd6c934f7661d4401a7}{P\+T\+T\+\_\+\+F\+R\+EE} =0, 
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452afb6100429e684a0bb069aeae42d61d61}{P\+T\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+S\+Y\+N\+CH}, 
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452a93b2c97af091bfaf7d5da22ee601cc48}{P\+T\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}, 
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452af58daa1a94c32302e14963761ba5bf93}{P\+T\+T\+\_\+\+I\+D\+\_\+\+N\+U\+M\+B\+ER}, 
+\newline
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452af7eddf0036edf87c26c2f463a00c96c3}{P\+T\+T\+\_\+\+D\+A\+TA}, 
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452a754b1d5abc357d34300514913a9ac78b}{P\+T\+T\+\_\+\+E\+R\+R\+OR}, 
+\hyperlink{group___p_t_t___service_gga26a2a479755f5b679cd4ac31c4f18452a54116d0e0f37b2732f4cc43a17ddd2a5}{P\+T\+T\+\_\+\+R\+E\+A\+DY}
+ \}\begin{DoxyCompactList}\small\item\em Indicates the current decoding status of a P\+TT Package. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task\+Handle\+\_\+t $\ast$ \hyperlink{group___p_t_t___service_ga438acb18ecae08bcac2d185a98a52177}{P\+T\+T\+\_\+\+Get\+Task\+Handler} (void)
+\item 
+void \hyperlink{group___p_t_t___service_gad7d3c7ba934966d4834e6609db4c13a6}{P\+T\+T\+\_\+\+Service\+\_\+\+Setup} (void)
+\begin{DoxyCompactList}\small\item\em This function initializes the internal package buffer pointers and sets up the detection task. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_gadb31aa6a2786f09d8d313976c2bb5da4}{P\+T\+T\+\_\+\+Service\+\_\+\+Pause} (void)
+\begin{DoxyCompactList}\small\item\em Pauses the detection task. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_ga2e11314e3f3a76f495368ea6d3eda678}{P\+T\+T\+\_\+\+Service\+\_\+\+Resume} (void)
+\begin{DoxyCompactList}\small\item\em Resumes the detection task. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___p_t_t___service_ga60ee4edcdd49ecb7eb5be5824ac798a8}{P\+T\+T\+\_\+\+Service\+\_\+is\+Paused} (void)
+\begin{DoxyCompactList}\small\item\em Checks whether the detection task is paused or not. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_gace2e54f065aefa03231ef49cd220d819}{P\+T\+T\+\_\+\+Reset\+Package} (P\+T\+T\+Package\+\_\+\+Typedef $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Resets a P\+TT Package to its P\+T\+T\+\_\+\+F\+R\+EE state. \end{DoxyCompactList}\item 
+P\+T\+T\+Package\+\_\+\+Typedef $\ast$ \hyperlink{group___p_t_t___service_gaa7e0c4bca58c6133c9fbb281ec291ffd}{P\+T\+T\+\_\+\+Pop\+Free\+Package} (void)
+\begin{DoxyCompactList}\small\item\em Returns the next free package from the free packages stack. If the stack is empty, returns a 0 pointer. \end{DoxyCompactList}\item 
+P\+T\+T\+Package\+\_\+\+Typedef $\ast$ \hyperlink{group___p_t_t___service_gadc0586652f7800ac7d8f5fc1602e9413}{P\+T\+T\+\_\+\+Pop\+Ready\+Package} (void)
+\begin{DoxyCompactList}\small\item\em Returns the next free package from the free packages stack. If the stack is empty, returns a 0 pointer. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_gabee25d161901d349ca414c842d1d40c1}{P\+T\+T\+\_\+\+Push\+Ready\+Package} (P\+T\+T\+Package\+\_\+\+Typedef $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Pushes a ready P\+TT Package into the P\+TT Ready F\+I\+FO. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___p_t_t___service_gac724bfd5cc2a6ee83d69e55ada24d523}{P\+T\+T\+\_\+\+Free\+Packages\+\_\+\+Available} (void)
+\begin{DoxyCompactList}\small\item\em Returns the number of F\+R\+EE P\+TT Packages available. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___p_t_t___service_ga4a212273c3b5f412315e299ba2d29b71}{P\+T\+T\+\_\+\+Ready\+Packages\+\_\+\+Available} (void)
+\begin{DoxyCompactList}\small\item\em Returns the number of P\+TT Records currently in the ready package buffer. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_ga82a1eaef3ef13fdfe4f6f5202344911b}{P\+T\+T\+\_\+\+Set\+Package\+Read\+Mutex} ()
+\begin{DoxyCompactList}\small\item\em Used for indicating that a P\+T\+T\+\_\+\+P\+OP command was received. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_ga2e10a37813087c50a43c904015fbdba1}{P\+T\+T\+\_\+\+Clear\+Package\+Read\+Mutex} ()
+\begin{DoxyCompactList}\small\item\em Used for indicating that a pending P\+T\+T\+\_\+\+P\+OP command handled. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___p_t_t___service_gad597123d8ce8bd52a4eab91dbd5023f7}{P\+T\+T\+\_\+\+Get\+Package\+Read\+Mutex} (void)
+\begin{DoxyCompactList}\small\item\em Returns the current state of the Package\+Read\+Mutex. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \hyperlink{group___p_t_t___service_gad621e3cbcce8a429cbb830ccd3bcd95f}{P\+T\+T\+\_\+\+Get\+Ready\+Fifo\+Output} (void)
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the head of the P\+TT Ready packages F\+I\+FO. \end{DoxyCompactList}\item 
+void \hyperlink{group___p_t_t___service_ga21b2bb3dfbb265ec298c3831be5ec743}{P\+T\+T\+\_\+\+Set\+Ready\+Fifo\+Output} (uint8\+\_\+t $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Sets the current output F\+I\+FO pointer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+\+: Anderson 
+\end{DoxyAuthor}

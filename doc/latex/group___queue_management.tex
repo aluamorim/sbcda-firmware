@@ -1,0 +1,72 @@
+\hypertarget{group___queue_management}{}\section{Queue\+Management}
+\label{group___queue_management}\index{Queue\+Management@{Queue\+Management}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__x_queue_create}{x\+Queue\+Create}
+\item 
+\hyperlink{group__x_queue_create_static}{x\+Queue\+Create\+Static}
+\item 
+\hyperlink{group__x_queue_send}{x\+Queue\+Send}
+\item 
+\hyperlink{group__x_queue_overwrite}{x\+Queue\+Overwrite}
+\item 
+\hyperlink{group__x_queue_receive}{x\+Queue\+Receive}
+\item 
+\hyperlink{group__x_queue_peek_from_i_s_r}{x\+Queue\+Peek\+From\+I\+SR}
+\item 
+\hyperlink{group__ux_queue_messages_waiting}{ux\+Queue\+Messages\+Waiting}
+\item 
+\hyperlink{group__v_queue_delete}{v\+Queue\+Delete}
+\item 
+\hyperlink{group__x_queue_send_from_i_s_r}{x\+Queue\+Send\+From\+I\+SR}
+\item 
+\hyperlink{group__x_queue_overwrite_from_i_s_r}{x\+Queue\+Overwrite\+From\+I\+SR}
+\item 
+\hyperlink{group__x_queue_receive_from_i_s_r}{x\+Queue\+Receive\+From\+I\+SR}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void $\ast$ \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group___queue_management_ga32a86d604e1706d72a5a4c62d8262f56}{Queue\+Set\+Handle\+\_\+t}
+\item 
+typedef void $\ast$ \hyperlink{group___queue_management_ga6c19a940d8fe07d338928ecea68b1776}{Queue\+Set\+Member\+Handle\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}\label{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}} 
+\index{Queue\+Management@{Queue\+Management}!Queue\+Handle\+\_\+t@{Queue\+Handle\+\_\+t}}
+\index{Queue\+Handle\+\_\+t@{Queue\+Handle\+\_\+t}!Queue\+Management@{Queue\+Management}}
+\subsubsection{\texorpdfstring{Queue\+Handle\+\_\+t}{QueueHandle\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t}}
+
+Type by which queues are referenced. For example, a call to x\+Queue\+Create() returns an Queue\+Handle\+\_\+t variable that can then be used as a parameter to x\+Queue\+Send(), x\+Queue\+Receive(), etc. 
+
+Definition at line 96 of file queue.\+h.
+
+\mbox{\Hypertarget{group___queue_management_ga32a86d604e1706d72a5a4c62d8262f56}\label{group___queue_management_ga32a86d604e1706d72a5a4c62d8262f56}} 
+\index{Queue\+Management@{Queue\+Management}!Queue\+Set\+Handle\+\_\+t@{Queue\+Set\+Handle\+\_\+t}}
+\index{Queue\+Set\+Handle\+\_\+t@{Queue\+Set\+Handle\+\_\+t}!Queue\+Management@{Queue\+Management}}
+\subsubsection{\texorpdfstring{Queue\+Set\+Handle\+\_\+t}{QueueSetHandle\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{group___queue_management_ga32a86d604e1706d72a5a4c62d8262f56}{Queue\+Set\+Handle\+\_\+t}}
+
+Type by which queue sets are referenced. For example, a call to x\+Queue\+Create\+Set() returns an x\+Queue\+Set variable that can then be used as a parameter to x\+Queue\+Select\+From\+Set(), x\+Queue\+Add\+To\+Set(), etc. 
+
+Definition at line 103 of file queue.\+h.
+
+\mbox{\Hypertarget{group___queue_management_ga6c19a940d8fe07d338928ecea68b1776}\label{group___queue_management_ga6c19a940d8fe07d338928ecea68b1776}} 
+\index{Queue\+Management@{Queue\+Management}!Queue\+Set\+Member\+Handle\+\_\+t@{Queue\+Set\+Member\+Handle\+\_\+t}}
+\index{Queue\+Set\+Member\+Handle\+\_\+t@{Queue\+Set\+Member\+Handle\+\_\+t}!Queue\+Management@{Queue\+Management}}
+\subsubsection{\texorpdfstring{Queue\+Set\+Member\+Handle\+\_\+t}{QueueSetMemberHandle\_t}}
+{\footnotesize\ttfamily typedef void$\ast$ \hyperlink{group___queue_management_ga6c19a940d8fe07d338928ecea68b1776}{Queue\+Set\+Member\+Handle\+\_\+t}}
+
+Queue sets can contain both queues and semaphores, so the Queue\+Set\+Member\+Handle\+\_\+t is defined as a type to be used where a parameter or return value can be either an Queue\+Handle\+\_\+t or an Semaphore\+Handle\+\_\+t. 
+
+Definition at line 110 of file queue.\+h.
+

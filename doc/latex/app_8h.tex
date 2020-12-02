@@ -1,0 +1,38 @@
+\hypertarget{app_8h}{}\section{src/include/app.h File Reference}
+\label{app_8h}\index{src/include/app.\+h@{src/include/app.\+h}}
+
+
+S\+B\+C\+DA Decoder Application.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}service.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/mss\+\_\+uart/mss\+\_\+uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/mss\+\_\+gpio/mss\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../drivers/mss\+\_\+sys\+\_\+services/mss\+\_\+sys\+\_\+services.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___app___tasks_gac9a578724e7472c16d1c3192bd544f98}{Command\+\_\+\+Parser\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gadf0ceb656d8916064e56e3ea4f1dba35}{House\+Keeping\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gadfbb515047e6c4c679611a5cc618b88c}{P\+T\+T\+Decoder\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gaccb4dfb0018e43c3697d98f4198bb845}{A\+D\+C\+Sampler\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_ga85a0f311d8c7082245c3308cd9161e46}{Idle\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Dummy task created for checking if R\+T\+OS is alive. The task simple blink S\+F2 board L\+E\+Ds. \end{DoxyCompactList}\item 
+void \hyperlink{group___h_w___setup_gaccfffcda3887f124927423457befe196}{H\+W\+\_\+\+Setup} (void)
+\item 
+void \hyperlink{group___h_w___setup_gafa2312fb8ab73b4e2cd8f53fbc785bb9}{A\+D987\+\_\+\+Setup} (void)
+\item 
+void \hyperlink{group___h_w___setup_ga289e48a62669d5b08693d32a8ed773a9}{M\+D\+D\+R\+\_\+\+Lpddr\+\_\+\+Setup} (void)
+\item 
+void \hyperlink{group___s_b_c_d_a___a_p_p_gad2def83dd6929f8238ab553eed422d73}{sbcda\+\_\+decoder\+\_\+app} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+B\+C\+DA Decoder Application. 
+

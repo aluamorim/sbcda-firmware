@@ -1,0 +1,162 @@
+\hypertarget{group___housekeeping___service}{}\section{Housekeeping\+\_\+\+Service}
+\label{group___housekeeping___service}\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_h_k_package___typedef}{H\+K\+Package\+\_\+\+Typedef}
+\begin{DoxyCompactList}\small\item\em Defines the default format for House\+Keeping packages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___housekeeping___service_gac59d791680b33dd9ce060d6cd1c8d503}{H\+K\+\_\+\+Service\+\_\+\+Setup} ()
+\begin{DoxyCompactList}\small\item\em Initializes Housekeeping service. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \hyperlink{group___housekeeping___service_ga18db64c11f8d6334b8e954d70da0045e}{H\+K\+\_\+\+Get\+\_\+\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the HK Package. \end{DoxyCompactList}\item 
+void \hyperlink{group___housekeeping___service_ga4df6d95ad8240c83fae869b1cdf25c5e}{H\+K\+\_\+\+Set\+\_\+\+Config} (uint16\+\_\+t word)
+\begin{DoxyCompactList}\small\item\em Sets the current HK config word. \end{DoxyCompactList}\item 
+uint16\+\_\+t \hyperlink{group___housekeeping___service_ga8f8a150f9356f9acaa04e0fa6845c665}{H\+K\+\_\+\+Get\+\_\+\+Config} ()
+\begin{DoxyCompactList}\small\item\em Returns the current HK configuration word. \end{DoxyCompactList}\item 
+void \hyperlink{group___housekeeping___service_gafc2f4843a1264e16569eed48653b9d5c}{H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time} (uint8\+\_\+t t)
+\begin{DoxyCompactList}\small\item\em Sets the refresh time for collecting HK information. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___housekeeping___service_ga302ac334855fd8caa8f08bdb8ccd14d8}{H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time} ()
+\begin{DoxyCompactList}\small\item\em Returns the current refresh time of the HK Task in ms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___housekeeping___service_ga18db64c11f8d6334b8e954d70da0045e}\label{group___housekeeping___service_ga18db64c11f8d6334b8e954d70da0045e}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Get\+\_\+\+Buffer@{H\+K\+\_\+\+Get\+\_\+\+Buffer}}
+\index{H\+K\+\_\+\+Get\+\_\+\+Buffer@{H\+K\+\_\+\+Get\+\_\+\+Buffer}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Get\+\_\+\+Buffer()}{HK\_Get\_Buffer()}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ H\+K\+\_\+\+Get\+\_\+\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a pointer to the HK Package. 
+
+H\+K\+\_\+\+Get\+\_\+\+Buffer
+
+\begin{DoxyReturn}{Returns}
+(uint8\+\_\+t $\ast$) A pointer to the latest HK Package 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file housekeeping\+\_\+service.\+c.
+
+
+
+Referenced by House\+Keeping\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___housekeeping___service_ga8f8a150f9356f9acaa04e0fa6845c665}\label{group___housekeeping___service_ga8f8a150f9356f9acaa04e0fa6845c665}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Get\+\_\+\+Config@{H\+K\+\_\+\+Get\+\_\+\+Config}}
+\index{H\+K\+\_\+\+Get\+\_\+\+Config@{H\+K\+\_\+\+Get\+\_\+\+Config}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Get\+\_\+\+Config()}{HK\_Get\_Config()}}
+{\footnotesize\ttfamily uint16\+\_\+t H\+K\+\_\+\+Get\+\_\+\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current HK configuration word. 
+
+H\+K\+\_\+\+Get\+\_\+\+Config
+
+\begin{DoxyReturn}{Returns}
+Current HK config word 
+\end{DoxyReturn}
+
+
+Definition at line 69 of file housekeeping\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___housekeeping___service_ga302ac334855fd8caa8f08bdb8ccd14d8}\label{group___housekeeping___service_ga302ac334855fd8caa8f08bdb8ccd14d8}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time@{H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time}}
+\index{H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time@{H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time()}{HK\_Get\_Refresh\_Time()}}
+{\footnotesize\ttfamily uint8\+\_\+t H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the current refresh time of the HK Task in ms. 
+
+H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time \begin{DoxyReturn}{Returns}
+refresh time in ms. 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file housekeeping\+\_\+service.\+c.
+
+
+
+Referenced by House\+Keeping\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___housekeeping___service_gac59d791680b33dd9ce060d6cd1c8d503}\label{group___housekeeping___service_gac59d791680b33dd9ce060d6cd1c8d503}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Service\+\_\+\+Setup@{H\+K\+\_\+\+Service\+\_\+\+Setup}}
+\index{H\+K\+\_\+\+Service\+\_\+\+Setup@{H\+K\+\_\+\+Service\+\_\+\+Setup}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Service\+\_\+\+Setup()}{HK\_Service\_Setup()}}
+{\footnotesize\ttfamily void H\+K\+\_\+\+Service\+\_\+\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes Housekeeping service. 
+
+H\+K\+\_\+\+Service\+\_\+\+Setup 
+
+Definition at line 44 of file housekeeping\+\_\+service.\+c.
+
+
+
+Referenced by House\+Keeping\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___housekeeping___service_ga4df6d95ad8240c83fae869b1cdf25c5e}\label{group___housekeeping___service_ga4df6d95ad8240c83fae869b1cdf25c5e}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Set\+\_\+\+Config@{H\+K\+\_\+\+Set\+\_\+\+Config}}
+\index{H\+K\+\_\+\+Set\+\_\+\+Config@{H\+K\+\_\+\+Set\+\_\+\+Config}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Set\+\_\+\+Config()}{HK\_Set\_Config()}}
+{\footnotesize\ttfamily void H\+K\+\_\+\+Set\+\_\+\+Config (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{word }\end{DoxyParamCaption})}
+
+
+
+Sets the current HK config word. 
+
+H\+K\+\_\+\+Set\+\_\+\+Config
+
+The configuration word masks defines which HK measure is enabled or not. It can be updated by the on-\/board computer using the H\+K\+\_\+\+C\+O\+N\+F\+IG command with the firmware in Configuration Mode. The configuration word is a 2-\/byte integer whose bits are mapped as follows\+: 
+\begin{DoxyPre}
+0 - RTC time tag
+1 - Current sensors
+2 - ADC RMS
+3 - PLL Synch flag
+4 - Over - current
+5-15 - Reserved for future use
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & HK configuration word. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file housekeeping\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___housekeeping___service_gafc2f4843a1264e16569eed48653b9d5c}\label{group___housekeeping___service_gafc2f4843a1264e16569eed48653b9d5c}} 
+\index{Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}!H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time@{H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time}}
+\index{H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time@{H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time}!Housekeeping\+\_\+\+Service@{Housekeeping\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time()}{HK\_Set\_Refresh\_Time()}}
+{\footnotesize\ttfamily void H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{t }\end{DoxyParamCaption})}
+
+
+
+Sets the refresh time for collecting HK information. 
+
+H\+K\+\_\+\+Set\+\_\+\+Refresh\+\_\+\+Time
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & Refresh time in ms. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file housekeeping\+\_\+service.\+c.
+

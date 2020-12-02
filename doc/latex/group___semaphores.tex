@@ -1,0 +1,154 @@
+\hypertarget{group___semaphores}{}\section{Semaphores}
+\label{group___semaphores}\index{Semaphores@{Semaphores}}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__v_semaphore_create_binary}{v\+Semaphore\+Create\+Binary}
+\item 
+\hyperlink{group__x_semaphore_create_binary}{x\+Semaphore\+Create\+Binary}
+\item 
+\hyperlink{group__x_semaphore_create_binary_static}{x\+Semaphore\+Create\+Binary\+Static}
+\item 
+\hyperlink{group__x_semaphore_take}{x\+Semaphore\+Take}
+\item 
+\hyperlink{group__x_semaphore_take_recursive}{x\+Semaphore\+Take\+Recursive}
+\item 
+\hyperlink{group__x_semaphore_give}{x\+Semaphore\+Give}
+\item 
+\hyperlink{group__x_semaphore_give_recursive}{x\+Semaphore\+Give\+Recursive}
+\item 
+\hyperlink{group__x_semaphore_give_from_i_s_r}{x\+Semaphore\+Give\+From\+I\+SR}
+\item 
+\hyperlink{group__x_semaphore_create_mutex}{x\+Semaphore\+Create\+Mutex}
+\item 
+\hyperlink{group__x_semaphore_create_mutex_static}{x\+Semaphore\+Create\+Mutex\+Static}
+\item 
+\hyperlink{group__x_semaphore_create_recursive_mutex}{x\+Semaphore\+Create\+Recursive\+Mutex}
+\item 
+\hyperlink{group__x_semaphore_create_recursive_mutex_static}{x\+Semaphore\+Create\+Recursive\+Mutex\+Static}
+\item 
+\hyperlink{group__x_semaphore_create_counting}{x\+Semaphore\+Create\+Counting}
+\item 
+\hyperlink{group__x_semaphore_create_counting_static}{x\+Semaphore\+Create\+Counting\+Static}
+\item 
+\hyperlink{group__v_semaphore_delete}{v\+Semaphore\+Delete}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___semaphores_ga076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+SR}(x\+Semaphore,  px\+Higher\+Priority\+Task\+Woken)~x\+Queue\+Receive\+From\+I\+SR( ( \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), N\+U\+LL, ( px\+Higher\+Priority\+Task\+Woken ) )
+\item 
+\#define \hyperlink{group___semaphores_ga7403bfbc06fb8449b2334f55d939a4c4}{x\+Semaphore\+Get\+Mutex\+Holder}(x\+Semaphore)~x\+Queue\+Get\+Mutex\+Holder( ( x\+Semaphore ) )
+\item 
+\#define \hyperlink{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}{ux\+Semaphore\+Get\+Count}(x\+Semaphore)~ux\+Queue\+Messages\+Waiting( ( \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ) )
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+semphr. h
+
+
+\begin{DoxyPre}vSemaphoreCreateBinary( SemaphoreHandle\_t xSemaphore )\end{DoxyPre}
+
+
+In many usage scenarios it is faster and more memory efficient to use a direct to task notification in place of a binary semaphore! \href{http://www.freertos.org/RTOS-task-notifications.html}{\tt http\+://www.\+freertos.\+org/\+R\+T\+O\+S-\/task-\/notifications.\+html}
+
+This old v\+Semaphore\+Create\+Binary() macro is now deprecated in favour of the x\+Semaphore\+Create\+Binary() function. Note that binary semaphores created using the v\+Semaphore\+Create\+Binary() macro are created in a state such that the first call to \textquotesingle{}take\textquotesingle{} the semaphore would pass, whereas binary semaphores created using x\+Semaphore\+Create\+Binary() are created in a state such that the the semaphore must first be \textquotesingle{}given\textquotesingle{} before it can be \textquotesingle{}taken\textquotesingle{}.
+
+{\itshape Macro} that implements a semaphore by using the existing queue mechanism. The queue length is 1 as this is a binary semaphore. The data size is 0 as we don\textquotesingle{}t want to actually store any data -\/ we just want to know if the queue is empty or full.
+
+This type of semaphore can be used for pure synchronisation between tasks or between an interrupt and a task. The semaphore need not be given back once obtained, so one task/interrupt can continuously \textquotesingle{}give\textquotesingle{} the semaphore while another continuously \textquotesingle{}takes\textquotesingle{} the semaphore. For this reason this type of semaphore does not use a priority inheritance mechanism. For an alternative that does use priority inheritance see x\+Semaphore\+Create\+Mutex().
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Semaphore} & Handle to the created semaphore. Should be of type Semaphore\+Handle\+\_\+t.\\
+\hline
+\end{DoxyParams}
+Example usage\+: 
+\begin{DoxyPre}
+SemaphoreHandle\_t xSemaphore = NULL;\end{DoxyPre}
+
+
+
+\begin{DoxyPre}void vATask( void * pvParameters )
+\{
+   // Semaphore cannot be used before a call to vSemaphoreCreateBinary ().
+   // This is a macro so pass the variable in directly.
+   vSemaphoreCreateBinary( xSemaphore );\end{DoxyPre}
+
+
+
+\begin{DoxyPre}   if( xSemaphore != NULL )
+   \{
+       // The semaphore was created successfully.
+       // The semaphore can now be used.
+   \}
+\}
+\end{DoxyPre}
+ 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}\label{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}} 
+\index{Semaphores@{Semaphores}!ux\+Semaphore\+Get\+Count@{ux\+Semaphore\+Get\+Count}}
+\index{ux\+Semaphore\+Get\+Count@{ux\+Semaphore\+Get\+Count}!Semaphores@{Semaphores}}
+\subsubsection{\texorpdfstring{ux\+Semaphore\+Get\+Count}{uxSemaphoreGetCount}}
+{\footnotesize\ttfamily \#define ux\+Semaphore\+Get\+Count(\begin{DoxyParamCaption}\item[{}]{x\+Semaphore }\end{DoxyParamCaption})~ux\+Queue\+Messages\+Waiting( ( \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ) )}
+
+\hyperlink{semphr_8h_source}{semphr.\+h} 
+\begin{DoxyPre}UBaseType\_t \hyperlink{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}{uxSemaphoreGetCount( SemaphoreHandle\_t xSemaphore )};\end{DoxyPre}
+
+
+If the semaphore is a counting semaphore then \hyperlink{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}{ux\+Semaphore\+Get\+Count()} returns its current count value. If the semaphore is a binary semaphore then \hyperlink{group___semaphores_gaa26a3d7cf9b5595a652daeb7f81229f3}{ux\+Semaphore\+Get\+Count()} returns 1 if the semaphore is available, and 0 if the semaphore is not available. 
+
+Definition at line 1174 of file semphr.\+h.
+
+\mbox{\Hypertarget{group___semaphores_ga7403bfbc06fb8449b2334f55d939a4c4}\label{group___semaphores_ga7403bfbc06fb8449b2334f55d939a4c4}} 
+\index{Semaphores@{Semaphores}!x\+Semaphore\+Get\+Mutex\+Holder@{x\+Semaphore\+Get\+Mutex\+Holder}}
+\index{x\+Semaphore\+Get\+Mutex\+Holder@{x\+Semaphore\+Get\+Mutex\+Holder}!Semaphores@{Semaphores}}
+\subsubsection{\texorpdfstring{x\+Semaphore\+Get\+Mutex\+Holder}{xSemaphoreGetMutexHolder}}
+{\footnotesize\ttfamily \#define x\+Semaphore\+Get\+Mutex\+Holder(\begin{DoxyParamCaption}\item[{}]{x\+Semaphore }\end{DoxyParamCaption})~x\+Queue\+Get\+Mutex\+Holder( ( x\+Semaphore ) )}
+
+\hyperlink{semphr_8h_source}{semphr.\+h} 
+\begin{DoxyPre}TaskHandle\_t \hyperlink{group___semaphores_ga7403bfbc06fb8449b2334f55d939a4c4}{xSemaphoreGetMutexHolder( SemaphoreHandle\_t xMutex )};\end{DoxyPre}
+
+
+If x\+Mutex is indeed a mutex type semaphore, return the current mutex holder. If x\+Mutex is not a mutex type semaphore, or the mutex is available (not held by a task), return N\+U\+LL.
+
+Note\+: This is a good way of determining if the calling task is the mutex holder, but not a good way of determining the identity of the mutex holder as the holder may change between the function exiting and the returned value being tested. 
+
+Definition at line 1162 of file semphr.\+h.
+
+\mbox{\Hypertarget{group___semaphores_ga076419b58e072655686939016e7ca3c5}\label{group___semaphores_ga076419b58e072655686939016e7ca3c5}} 
+\index{Semaphores@{Semaphores}!x\+Semaphore\+Take\+From\+I\+SR@{x\+Semaphore\+Take\+From\+I\+SR}}
+\index{x\+Semaphore\+Take\+From\+I\+SR@{x\+Semaphore\+Take\+From\+I\+SR}!Semaphores@{Semaphores}}
+\subsubsection{\texorpdfstring{x\+Semaphore\+Take\+From\+I\+SR}{xSemaphoreTakeFromISR}}
+{\footnotesize\ttfamily \#define x\+Semaphore\+Take\+From\+I\+SR(\begin{DoxyParamCaption}\item[{}]{x\+Semaphore,  }\item[{}]{px\+Higher\+Priority\+Task\+Woken }\end{DoxyParamCaption})~x\+Queue\+Receive\+From\+I\+SR( ( \hyperlink{group___queue_management_gaaf19d499892a4ce1409326ece00f5264}{Queue\+Handle\+\_\+t} ) ( x\+Semaphore ), N\+U\+LL, ( px\+Higher\+Priority\+Task\+Woken ) )}
+
+semphr. h 
+\begin{DoxyPre}
+xSemaphoreTakeFromISR(
+                         SemaphoreHandle\_t xSemaphore,
+                         BaseType\_t *pxHigherPriorityTaskWoken
+                     )\end{DoxyPre}
+
+
+{\itshape Macro} to take a semaphore from an I\+SR. The semaphore must have previously been created with a call to x\+Semaphore\+Create\+Binary() or x\+Semaphore\+Create\+Counting().
+
+Mutex type semaphores (those created using a call to x\+Semaphore\+Create\+Mutex()) must not be used with this macro.
+
+This macro can be used from an I\+SR, however taking a semaphore from an I\+SR is not a common operation. It is likely to only be useful when taking a counting semaphore when an interrupt is obtaining an object from a resource pool (when the semaphore count indicates the number of resources available).
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Semaphore} & A handle to the semaphore being taken. This is the handle returned when the semaphore was created.\\
+\hline
+{\em px\+Higher\+Priority\+Task\+Woken} & \hyperlink{group___semaphores_ga076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+S\+R()} will set $\ast$px\+Higher\+Priority\+Task\+Woken to pd\+T\+R\+UE if taking the semaphore caused a task to unblock, and the unblocked task has a priority higher than the currently running task. If \hyperlink{group___semaphores_ga076419b58e072655686939016e7ca3c5}{x\+Semaphore\+Take\+From\+I\+S\+R()} sets this value to pd\+T\+R\+UE then a context switch should be requested before the interrupt is exited.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pd\+T\+R\+UE if the semaphore was successfully taken, otherwise pd\+F\+A\+L\+SE 
+\end{DoxyReturn}
+
+
+Definition at line 707 of file semphr.\+h.
+

@@ -1,0 +1,148 @@
+\hypertarget{group___r_t_c___service}{}\section{R\+T\+C\+\_\+\+Service}
+\label{group___r_t_c___service}\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___r_t_c___service_ga6f74820802592d5449a8d5fe14a662a4}{R\+T\+C\+\_\+\+Setup} ()
+\begin{DoxyCompactList}\small\item\em Initializes R\+TC system to calendar mode, setting prescale do 1\+Hz. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c___service_ga2d4f183e21b0ef653b41301d3ff215d0}{R\+T\+C\+\_\+\+Set} (mss\+\_\+rtc\+\_\+calendar\+\_\+t $\ast$calendar)
+\begin{DoxyCompactList}\small\item\em Sets Load Value to R\+TC. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c___service_ga06c8dc761f0e0779c30a4c5e17d7c1f1}{R\+T\+C\+\_\+\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the R\+TC to its initial value. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c___service_ga1cb35ea7ed16caaaf9f4211c76a371d5}{R\+T\+C\+\_\+\+Stop} ()
+\begin{DoxyCompactList}\small\item\em Stops R\+TC. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c___service_ga66056b41ee0e3a45023c3ce47633e058}{R\+T\+C\+\_\+\+Start} ()
+\begin{DoxyCompactList}\small\item\em Starts R\+TC. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___r_t_c___service_gaffc3970d07652e14bc2d1f0de4582bca}{R\+T\+C\+\_\+\+Is\+\_\+\+Initialized} ()
+\begin{DoxyCompactList}\small\item\em Returns a boolean value indicating if the R\+TC was initialized or not. \end{DoxyCompactList}\item 
+void \hyperlink{group___r_t_c___service_ga3fbf86f372b02641ca67d03c2196b805}{R\+T\+C\+\_\+\+Get} (mss\+\_\+rtc\+\_\+calendar\+\_\+t $\ast$calendar)
+\begin{DoxyCompactList}\small\item\em Gets the current value of the R\+TC into the mss\+\_\+rtc\+\_\+calendar\+\_\+t structure reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___r_t_c___service_ga3fbf86f372b02641ca67d03c2196b805}\label{group___r_t_c___service_ga3fbf86f372b02641ca67d03c2196b805}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Get@{R\+T\+C\+\_\+\+Get}}
+\index{R\+T\+C\+\_\+\+Get@{R\+T\+C\+\_\+\+Get}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Get()}{RTC\_Get()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Get (\begin{DoxyParamCaption}\item[{mss\+\_\+rtc\+\_\+calendar\+\_\+t $\ast$}]{calendar }\end{DoxyParamCaption})}
+
+
+
+Gets the current value of the R\+TC into the mss\+\_\+rtc\+\_\+calendar\+\_\+t structure reference. 
+
+R\+T\+C\+\_\+\+Get
+
+
+\begin{DoxyParams}{Parameters}
+{\em calendar} & mss\+\_\+rtc\+\_\+calendar\+\_\+t structure reference where the current R\+TC value will be stored. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_gaffc3970d07652e14bc2d1f0de4582bca}\label{group___r_t_c___service_gaffc3970d07652e14bc2d1f0de4582bca}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Is\+\_\+\+Initialized@{R\+T\+C\+\_\+\+Is\+\_\+\+Initialized}}
+\index{R\+T\+C\+\_\+\+Is\+\_\+\+Initialized@{R\+T\+C\+\_\+\+Is\+\_\+\+Initialized}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Is\+\_\+\+Initialized()}{RTC\_Is\_Initialized()}}
+{\footnotesize\ttfamily uint8\+\_\+t R\+T\+C\+\_\+\+Is\+\_\+\+Initialized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a boolean value indicating if the R\+TC was initialized or not. 
+
+R\+T\+C\+\_\+\+Is\+\_\+\+Initialized
+
+\begin{DoxyReturn}{Returns}
+0 R\+TC Not initialized 
+
+1 R\+TC Initialized 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_ga06c8dc761f0e0779c30a4c5e17d7c1f1}\label{group___r_t_c___service_ga06c8dc761f0e0779c30a4c5e17d7c1f1}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Reset@{R\+T\+C\+\_\+\+Reset}}
+\index{R\+T\+C\+\_\+\+Reset@{R\+T\+C\+\_\+\+Reset}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Reset()}{RTC\_Reset()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the R\+TC to its initial value. 
+
+R\+T\+C\+\_\+\+Reset 
+
+Definition at line 48 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_ga2d4f183e21b0ef653b41301d3ff215d0}\label{group___r_t_c___service_ga2d4f183e21b0ef653b41301d3ff215d0}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Set@{R\+T\+C\+\_\+\+Set}}
+\index{R\+T\+C\+\_\+\+Set@{R\+T\+C\+\_\+\+Set}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Set()}{RTC\_Set()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Set (\begin{DoxyParamCaption}\item[{mss\+\_\+rtc\+\_\+calendar\+\_\+t $\ast$}]{calendar }\end{DoxyParamCaption})}
+
+
+
+Sets Load Value to R\+TC. 
+
+R\+T\+C\+\_\+\+Set
+
+
+\begin{DoxyParams}{Parameters}
+{\em calendar} & mss\+\_\+rtc\+\_\+calendar\+\_\+t structure containing Y M D H M S W Wd bytes. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_ga6f74820802592d5449a8d5fe14a662a4}\label{group___r_t_c___service_ga6f74820802592d5449a8d5fe14a662a4}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Setup@{R\+T\+C\+\_\+\+Setup}}
+\index{R\+T\+C\+\_\+\+Setup@{R\+T\+C\+\_\+\+Setup}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Setup()}{RTC\_Setup()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes R\+TC system to calendar mode, setting prescale do 1\+Hz. 
+
+R\+TC Command Interface
+
+R\+T\+C\+\_\+\+Init
+
+R\+T\+C\+\_\+\+Setup Init R\+TC 
+
+Definition at line 25 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_ga66056b41ee0e3a45023c3ce47633e058}\label{group___r_t_c___service_ga66056b41ee0e3a45023c3ce47633e058}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Start@{R\+T\+C\+\_\+\+Start}}
+\index{R\+T\+C\+\_\+\+Start@{R\+T\+C\+\_\+\+Start}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Start()}{RTC\_Start()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts R\+TC. 
+
+R\+T\+C\+\_\+\+Start 
+
+Definition at line 66 of file rtc\+\_\+service.\+c.
+
+\mbox{\Hypertarget{group___r_t_c___service_ga1cb35ea7ed16caaaf9f4211c76a371d5}\label{group___r_t_c___service_ga1cb35ea7ed16caaaf9f4211c76a371d5}} 
+\index{R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}!R\+T\+C\+\_\+\+Stop@{R\+T\+C\+\_\+\+Stop}}
+\index{R\+T\+C\+\_\+\+Stop@{R\+T\+C\+\_\+\+Stop}!R\+T\+C\+\_\+\+Service@{R\+T\+C\+\_\+\+Service}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Stop()}{RTC\_Stop()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops R\+TC. 
+
+R\+T\+C\+\_\+\+Stop 
+
+Definition at line 57 of file rtc\+\_\+service.\+c.
+

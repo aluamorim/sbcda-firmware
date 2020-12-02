@@ -1,0 +1,437 @@
+\hypertarget{group___d_d_s}{}\section{D\+DS}
+\label{group___d_d_s}\index{D\+DS@{D\+DS}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___d_d_s_gaae9812f46efd3711214d66ec5bd90674}{D\+D\+S\+\_\+\+B\+A\+SE}~0x30000000
+\item 
+\#define \hyperlink{group___d_d_s_ga61f7ba6d9616f3c1b1dd1ac799428fd1}{S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER}~D\+D\+S\+\_\+\+D\+E\+C\+O\+D\+ER
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+D\+D\+S\+\_\+\+Typedef $\ast$ \hyperlink{group___d_d_s_ga03744649eaa04f0f029df082e6ca9575}{D\+D\+S\+\_\+\+Get\+Decoder\+Instance} (void)
+\item 
+void \hyperlink{group___d_d_s_ga396bdfd69860d5c88d26f7094a3cc41c}{D\+D\+S\+\_\+\+Setup} (void)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_ga449b3850974b9054a63359b104b440dc}{D\+D\+S\+\_\+is\+New\+Window\+Ready} (void)
+\item 
+void \hyperlink{group___d_d_s_ga27670bb6491dd40f4c605dbec0bf505d}{D\+D\+S\+\_\+clear\+New\+Window\+Flag} (void)
+\item 
+void \hyperlink{group___d_d_s_ga010269c11a1f1c9f53f31d1521a22471}{D\+D\+S\+\_\+set\+New\+Window\+Flag} (void)
+\item 
+void \hyperlink{group___d_d_s_gacd945ae15e0559f2d8dce2860354ed57}{D\+D\+S\+\_\+\+Enable\+Decoder} (void)
+\item 
+void \hyperlink{group___d_d_s_ga17065a48b0ce7ad24740a144bb24fb55}{D\+D\+S\+\_\+\+Disable\+Decoder} (void)
+\item 
+void \hyperlink{group___d_d_s_gae4f18ac70ccacf5b0c08f35df3a68c7e}{D\+D\+S\+\_\+\+Decoder\+Start\+Op} (void)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_gab9346847068834883c8aa90e94ccf847}{D\+D\+S\+\_\+\+Detect\+Eop} (void)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_ga8432fe55e46d995b5b36dc8c262c0d2d}{D\+D\+S\+\_\+\+Detect\+Empty} (void)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_gadf4e994e9b2e845a52a72fcc5af9f19b}{D\+D\+S\+\_\+\+Decoder\+Eop} (void)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_gadafd1ef25b1e3bff8f5975e3001244c0}{D\+D\+S\+\_\+\+Decoder\+Empty} (void)
+\item 
+uint32\+\_\+t \hyperlink{group___d_d_s_gabfb67b0cb69b7d443df5a21426422bbf}{D\+D\+S\+\_\+\+Read\+Detect\+Buffer} (void)
+\item 
+void \hyperlink{group___d_d_s_gaaeb0c0549ccf4a0d5c4eb4b8733aad15}{D\+D\+S\+\_\+\+Set\+Amp\+Threshold} (uint32\+\_\+t val)
+\item 
+uint16\+\_\+t \hyperlink{group___d_d_s_ga3c1b6aafe67b4074170688cf170fad65}{D\+D\+S\+\_\+\+Calc\+Message\+Length} (uint8\+\_\+t msg\+Length)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_ga249a36f3fa12baff1cf03b7f6a8a0cac}{D\+D\+S\+\_\+\+Decode\+Bit} (uint16\+\_\+t symb0, uint16\+\_\+t symb1)
+\item 
+uint8\+\_\+t \hyperlink{group___d_d_s_ga4543aee7394ebf3441baf1f25c7c223c}{D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq} (uint32\+\_\+t new\+Idx, uint32\+\_\+t new\+Amp, uint8\+\_\+t $\ast$assigned\+\_\+decoder)
+\item 
+uint32\+\_\+t \hyperlink{group___d_d_s_ga1f53b4fdeb56f560600428473023f819}{D\+D\+S\+\_\+\+Detection\+\_\+\+Loop} ()
+\item 
+void \hyperlink{group___d_d_s_ga391db24a133ffa19533b5845c365367d}{D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout} (void)
+\item 
+uint32\+\_\+t \hyperlink{group___d_d_s_ga0d11598fca2a9f0eceb43f06a0fb2c4e}{D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___d_d_s_gaae9812f46efd3711214d66ec5bd90674}\label{group___d_d_s_gaae9812f46efd3711214d66ec5bd90674}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+B\+A\+SE@{D\+D\+S\+\_\+\+B\+A\+SE}}
+\index{D\+D\+S\+\_\+\+B\+A\+SE@{D\+D\+S\+\_\+\+B\+A\+SE}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+B\+A\+SE}{DDS\_BASE}}
+{\footnotesize\ttfamily \#define D\+D\+S\+\_\+\+B\+A\+SE~0x30000000}
+
+Detect/\+Decoder bit masks 
+
+Definition at line 29 of file dds.\+h.
+
+\mbox{\Hypertarget{group___d_d_s_ga61f7ba6d9616f3c1b1dd1ac799428fd1}\label{group___d_d_s_ga61f7ba6d9616f3c1b1dd1ac799428fd1}} 
+\index{D\+DS@{D\+DS}!S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER@{S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER}}
+\index{S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER@{S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER}{SBCDA\_DECODER}}
+{\footnotesize\ttfamily \#define S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER~D\+D\+S\+\_\+\+D\+E\+C\+O\+D\+ER}
+
+D\+D\+S\+Decoder regbank instance 
+
+Definition at line 164 of file dds.\+h.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Decoder\+Empty(), D\+D\+S\+\_\+\+Decoder\+Eop(), D\+D\+S\+\_\+\+Decoder\+Start\+Op(), D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop(), D\+D\+S\+\_\+\+Detect\+Empty(), D\+D\+S\+\_\+\+Detect\+Eop(), D\+D\+S\+\_\+\+Detection\+\_\+\+Loop(), D\+D\+S\+\_\+\+Disable\+Decoder(), D\+D\+S\+\_\+\+Enable\+Decoder(), D\+D\+S\+\_\+\+Get\+Decoder\+Instance(), D\+D\+S\+\_\+\+Read\+Detect\+Buffer(), and D\+D\+S\+\_\+\+Set\+Amp\+Threshold().
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___d_d_s_ga3c1b6aafe67b4074170688cf170fad65}\label{group___d_d_s_ga3c1b6aafe67b4074170688cf170fad65}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Calc\+Message\+Length@{D\+D\+S\+\_\+\+Calc\+Message\+Length}}
+\index{D\+D\+S\+\_\+\+Calc\+Message\+Length@{D\+D\+S\+\_\+\+Calc\+Message\+Length}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Calc\+Message\+Length()}{DDS\_CalcMessageLength()}}
+{\footnotesize\ttfamily uint16\+\_\+t D\+D\+S\+\_\+\+Calc\+Message\+Length (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{msg\+Length }\end{DoxyParamCaption})}
+
+Returns the correspondent data portion size in bits for a given message length code. O\+BS\+: Assuming a 28bit I\+D\+\_\+\+N\+U\+M\+B\+ER format 
+
+Definition at line 242 of file dds.\+c.
+
+\mbox{\Hypertarget{group___d_d_s_ga27670bb6491dd40f4c605dbec0bf505d}\label{group___d_d_s_ga27670bb6491dd40f4c605dbec0bf505d}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+clear\+New\+Window\+Flag@{D\+D\+S\+\_\+clear\+New\+Window\+Flag}}
+\index{D\+D\+S\+\_\+clear\+New\+Window\+Flag@{D\+D\+S\+\_\+clear\+New\+Window\+Flag}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+clear\+New\+Window\+Flag()}{DDS\_clearNewWindowFlag()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+clear\+New\+Window\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+clear\+New\+Window\+Flag 
+
+Definition at line 75 of file dds.\+c.
+
+
+
+Referenced by P\+T\+T\+Decoder\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___d_d_s_ga249a36f3fa12baff1cf03b7f6a8a0cac}\label{group___d_d_s_ga249a36f3fa12baff1cf03b7f6a8a0cac}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Decode\+Bit@{D\+D\+S\+\_\+\+Decode\+Bit}}
+\index{D\+D\+S\+\_\+\+Decode\+Bit@{D\+D\+S\+\_\+\+Decode\+Bit}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Decode\+Bit()}{DDS\_DecodeBit()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Decode\+Bit (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{symb0,  }\item[{uint16\+\_\+t}]{symb1 }\end{DoxyParamCaption})}
+
+Every symbol is a 10bit value in 2\textquotesingle{}s complement format. However, they are placed into a 16bit unsigned int with no sign extension. This function sign extends the symbol values and then compare them in order to determine if they correspond to a 1 or a 0 bit. The following convention is assumed\+:
+
+if symb0 $<$= symb1 =$>$ (-\/1) to (1) transition =$>$ bit 1 if symb0 $>$ symb1 =$>$ (1) to (-\/1) transition =$>$ bit 0 
+
+Definition at line 287 of file dds.\+c.
+
+\mbox{\Hypertarget{group___d_d_s_gadafd1ef25b1e3bff8f5975e3001244c0}\label{group___d_d_s_gadafd1ef25b1e3bff8f5975e3001244c0}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Decoder\+Empty@{D\+D\+S\+\_\+\+Decoder\+Empty}}
+\index{D\+D\+S\+\_\+\+Decoder\+Empty@{D\+D\+S\+\_\+\+Decoder\+Empty}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Decoder\+Empty()}{DDS\_DecoderEmpty()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Decoder\+Empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Decoder\+Empty
+
+A new detection is signalized when the D\+D\+S\+\_\+\+D\+E\+T\+E\+C\+T\+O\+U\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+M\+P\+TY is clear 
+
+Definition at line 215 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop().
+
+\mbox{\Hypertarget{group___d_d_s_gadf4e994e9b2e845a52a72fcc5af9f19b}\label{group___d_d_s_gadf4e994e9b2e845a52a72fcc5af9f19b}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Decoder\+Eop@{D\+D\+S\+\_\+\+Decoder\+Eop}}
+\index{D\+D\+S\+\_\+\+Decoder\+Eop@{D\+D\+S\+\_\+\+Decoder\+Eop}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Decoder\+Eop()}{DDS\_DecoderEop()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Decoder\+Eop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Decoder\+Eop 
+
+Definition at line 206 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop().
+
+\mbox{\Hypertarget{group___d_d_s_gae4f18ac70ccacf5b0c08f35df3a68c7e}\label{group___d_d_s_gae4f18ac70ccacf5b0c08f35df3a68c7e}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Decoder\+Start\+Op@{D\+D\+S\+\_\+\+Decoder\+Start\+Op}}
+\index{D\+D\+S\+\_\+\+Decoder\+Start\+Op@{D\+D\+S\+\_\+\+Decoder\+Start\+Op}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Decoder\+Start\+Op()}{DDS\_DecoderStartOp()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Decoder\+Start\+Op (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\hyperlink{group___d_d_s_gae4f18ac70ccacf5b0c08f35df3a68c7e}{D\+D\+S\+\_\+\+Decoder\+Start\+Op()} 
+
+Definition at line 179 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+\mbox{\Hypertarget{group___d_d_s_ga0d11598fca2a9f0eceb43f06a0fb2c4e}\label{group___d_d_s_ga0d11598fca2a9f0eceb43f06a0fb2c4e}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop@{D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop}}
+\index{D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop@{D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop()}{DDS\_Decoding\_Loop()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Decoding\+\_\+\+Loop
+
+The decoding loop is the procedure responsible for reading symbols out of the P\+T\+TD Buffer F\+I\+FO, converting them into bit representation and attaching each bit to its corresponding building package.
+
+\begin{DoxyReturn}{Returns}
+The number of finished packages in the current loop 
+\end{DoxyReturn}
+fifo pop on this load 
+
+Definition at line 758 of file dds.\+c.
+
+
+
+References D\+D\+S\+\_\+\+Decoder\+Empty(), D\+D\+S\+\_\+\+Decoder\+Eop(), and S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+\mbox{\Hypertarget{group___d_d_s_ga8432fe55e46d995b5b36dc8c262c0d2d}\label{group___d_d_s_ga8432fe55e46d995b5b36dc8c262c0d2d}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Detect\+Empty@{D\+D\+S\+\_\+\+Detect\+Empty}}
+\index{D\+D\+S\+\_\+\+Detect\+Empty@{D\+D\+S\+\_\+\+Detect\+Empty}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Detect\+Empty()}{DDS\_DetectEmpty()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Detect\+Empty (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Detect\+Empty
+
+A new detection is signalized when the D\+D\+S\+\_\+\+D\+E\+T\+E\+C\+T\+O\+U\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+M\+P\+TY is clear 
+
+Definition at line 199 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Detection\+\_\+\+Loop().
+
+\mbox{\Hypertarget{group___d_d_s_gab9346847068834883c8aa90e94ccf847}\label{group___d_d_s_gab9346847068834883c8aa90e94ccf847}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Detect\+Eop@{D\+D\+S\+\_\+\+Detect\+Eop}}
+\index{D\+D\+S\+\_\+\+Detect\+Eop@{D\+D\+S\+\_\+\+Detect\+Eop}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Detect\+Eop()}{DDS\_DetectEop()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Detect\+Eop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Detect\+Eop 
+
+Definition at line 188 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Detection\+\_\+\+Loop().
+
+\mbox{\Hypertarget{group___d_d_s_ga1f53b4fdeb56f560600428473023f819}\label{group___d_d_s_ga1f53b4fdeb56f560600428473023f819}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Detection\+\_\+\+Loop@{D\+D\+S\+\_\+\+Detection\+\_\+\+Loop}}
+\index{D\+D\+S\+\_\+\+Detection\+\_\+\+Loop@{D\+D\+S\+\_\+\+Detection\+\_\+\+Loop}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Detection\+\_\+\+Loop()}{DDS\_Detection\_Loop()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+D\+S\+\_\+\+Detection\+\_\+\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Detection\+\_\+\+Loop
+
+The Detection Loop is responsible for acquiring new frequencies, assigning a free decoder to them and allocation a new P\+TT Package for the decoding process. It is also responsible for applying the software version of the Detection Mask for each new frequency, comparing them to the previously allocated ones.
+
+Every new frequency is compared to the previously detected ones to avoid conflicts. A conflict happens when a new frequency is located less than 1.\+6 K\+Hz (right or left) distant from any other frequency already assigned to a decoder. When a conflict occurs the system keeps the frequency associated to the highest amplitude, discarding the other. At the end of the Detection Loop the system is guaranteed to operate only with the highest components of the spectrum within the current 10ms window.
+
+\begin{DoxyReturn}{Returns}
+The number of newly detected frequencies during the current iteration 
+\end{DoxyReturn}
+When previously assigned is replaced, it must leave space for the the new detected one. The previous decoding process must be stopped and its corresponding memory must be cleaned. The cleaning process will be performed during the Decoding\+\_\+\+Loop when the package is marked as P\+T\+T\+\_\+\+E\+R\+R\+OR.
+
+In this case the frequency was detected once and replaced another frequency that was also detected once. In the next iteration this frequency shall be \textquotesingle{}detected\+\_\+twice\textquotesingle{} and will be treated as a new detection.
+
+Definition at line 669 of file dds.\+c.
+
+
+
+References D\+D\+S\+\_\+\+Detect\+Empty(), D\+D\+S\+\_\+\+Detect\+Eop(), D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout(), and S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by P\+T\+T\+Decoder\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___d_d_s_ga17065a48b0ce7ad24740a144bb24fb55}\label{group___d_d_s_ga17065a48b0ce7ad24740a144bb24fb55}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Disable\+Decoder@{D\+D\+S\+\_\+\+Disable\+Decoder}}
+\index{D\+D\+S\+\_\+\+Disable\+Decoder@{D\+D\+S\+\_\+\+Disable\+Decoder}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Disable\+Decoder()}{DDS\_DisableDecoder()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Disable\+Decoder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Disable\+\_\+\+Decoder()
+
+This function disables the detect/decoder module on F\+P\+GA Detection/decoding processes run only if E\+N\+A\+B\+LE is set 
+
+Definition at line 172 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Setup().
+
+\mbox{\Hypertarget{group___d_d_s_gacd945ae15e0559f2d8dce2860354ed57}\label{group___d_d_s_gacd945ae15e0559f2d8dce2860354ed57}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Enable\+Decoder@{D\+D\+S\+\_\+\+Enable\+Decoder}}
+\index{D\+D\+S\+\_\+\+Enable\+Decoder@{D\+D\+S\+\_\+\+Enable\+Decoder}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Enable\+Decoder()}{DDS\_EnableDecoder()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Enable\+Decoder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Enable\+\_\+\+Decoder\+\_\+\+Module()
+
+This function enables the detect/decoder module on F\+P\+GA Detection/decoding processes run only if E\+N\+A\+B\+LE is set 
+
+Definition at line 160 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+
+
+Referenced by P\+T\+T\+Decoder\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___d_d_s_ga03744649eaa04f0f029df082e6ca9575}\label{group___d_d_s_ga03744649eaa04f0f029df082e6ca9575}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Get\+Decoder\+Instance@{D\+D\+S\+\_\+\+Get\+Decoder\+Instance}}
+\index{D\+D\+S\+\_\+\+Get\+Decoder\+Instance@{D\+D\+S\+\_\+\+Get\+Decoder\+Instance}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Get\+Decoder\+Instance()}{DDS\_GetDecoderInstance()}}
+{\footnotesize\ttfamily D\+D\+S\+\_\+\+Typedef$\ast$ D\+D\+S\+\_\+\+Get\+Decoder\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Get\+Decoder\+Instance 
+
+Definition at line 89 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+\mbox{\Hypertarget{group___d_d_s_ga4543aee7394ebf3441baf1f25c7c223c}\label{group___d_d_s_ga4543aee7394ebf3441baf1f25c7c223c}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq@{D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq}}
+\index{D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq@{D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq()}{DDS\_Insert\_Detected\_Freq()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{new\+Idx,  }\item[{uint32\+\_\+t}]{new\+Amp,  }\item[{uint8\+\_\+t $\ast$}]{assigned\+\_\+decoder }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Insert\+\_\+\+Detected\+\_\+\+Freq
+
+This procedure tries to insert a new detected freq/amp pair into the current frequencies vector. New frequencies must be at least 3.\+2\+K\+Hz apart from previously allocated ones.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+idx} & = Newly detected frequency index. \\
+\hline
+{\em new\+\_\+amp} & = Newly detected frequency amp. \\
+\hline
+{\em assigned\+\_\+position} & = Number of the decoder assigned for the detected frequency\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+D\+D\+S\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+F\+R\+E\+Q\+\_\+\+N\+EW\+: new frequency assigned to a free decoder position 
+
+D\+D\+S\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+F\+R\+E\+Q\+\_\+\+R\+E\+P\+L\+A\+CE\+: new freq replace a previously assigned decoder 
+
+D\+D\+S\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+F\+R\+E\+Q\+\_\+\+N\+O\+NE\+: new freq could not be insterted because all decoders where busy. 
+\end{DoxyReturn}
+Frequency idx have are 11 bits long with a precision of 128/2$^\wedge$11 k\+Hz. The idx are signed and organized around zero (F\+FT result) and go from -\/1024 to +1023 (2$^\wedge$11) in 2\textquotesingle{}s-\/complement format. However, after read the idx values are stored on 32bit unsigned integer variables, whithout sign extension.
+
+Step resolution\+: 0,0625 k\+Hz Overlap bandwidth\+: 3.\+2 k\+Hz = 51.\+2 $\ast$ 0,0625 k\+Hz
+
+Each new detected peak must be at least 51 freq\+Idxes apart (left and right)
+
+Definition at line 499 of file dds.\+c.
+
+\mbox{\Hypertarget{group___d_d_s_ga449b3850974b9054a63359b104b440dc}\label{group___d_d_s_ga449b3850974b9054a63359b104b440dc}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+is\+New\+Window\+Ready@{D\+D\+S\+\_\+is\+New\+Window\+Ready}}
+\index{D\+D\+S\+\_\+is\+New\+Window\+Ready@{D\+D\+S\+\_\+is\+New\+Window\+Ready}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+is\+New\+Window\+Ready()}{DDS\_isNewWindowReady()}}
+{\footnotesize\ttfamily uint8\+\_\+t D\+D\+S\+\_\+is\+New\+Window\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+is\+New\+Window\+Ready 
+
+Definition at line 68 of file dds.\+c.
+
+
+
+Referenced by P\+T\+T\+Decoder\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___d_d_s_gabfb67b0cb69b7d443df5a21426422bbf}\label{group___d_d_s_gabfb67b0cb69b7d443df5a21426422bbf}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Read\+Detect\+Buffer@{D\+D\+S\+\_\+\+Read\+Detect\+Buffer}}
+\index{D\+D\+S\+\_\+\+Read\+Detect\+Buffer@{D\+D\+S\+\_\+\+Read\+Detect\+Buffer}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Read\+Detect\+Buffer()}{DDS\_ReadDetectBuffer()}}
+{\footnotesize\ttfamily uint32\+\_\+t D\+D\+S\+\_\+\+Read\+Detect\+Buffer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+P\+O\+P\+\_\+\+Detect\+Buffer
+
+This function performs a R\+E\+AD operation on the detection data buffer. Each R\+E\+AD pops one element of the data fifo, updating the control register 
+
+Definition at line 226 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+\mbox{\Hypertarget{group___d_d_s_gaaeb0c0549ccf4a0d5c4eb4b8733aad15}\label{group___d_d_s_gaaeb0c0549ccf4a0d5c4eb4b8733aad15}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Set\+Amp\+Threshold@{D\+D\+S\+\_\+\+Set\+Amp\+Threshold}}
+\index{D\+D\+S\+\_\+\+Set\+Amp\+Threshold@{D\+D\+S\+\_\+\+Set\+Amp\+Threshold}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Set\+Amp\+Threshold()}{DDS\_SetAmpThreshold()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Set\+Amp\+Threshold (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Set\+Amp\+Threshold 
+
+Definition at line 233 of file dds.\+c.
+
+
+
+References S\+B\+C\+D\+A\+\_\+\+D\+E\+C\+O\+D\+ER.
+
+\mbox{\Hypertarget{group___d_d_s_ga010269c11a1f1c9f53f31d1521a22471}\label{group___d_d_s_ga010269c11a1f1c9f53f31d1521a22471}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+set\+New\+Window\+Flag@{D\+D\+S\+\_\+set\+New\+Window\+Flag}}
+\index{D\+D\+S\+\_\+set\+New\+Window\+Flag@{D\+D\+S\+\_\+set\+New\+Window\+Flag}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+set\+New\+Window\+Flag()}{DDS\_setNewWindowFlag()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+set\+New\+Window\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+setr\+New\+Window\+Flag 
+
+Definition at line 82 of file dds.\+c.
+
+\mbox{\Hypertarget{group___d_d_s_ga396bdfd69860d5c88d26f7094a3cc41c}\label{group___d_d_s_ga396bdfd69860d5c88d26f7094a3cc41c}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Setup@{D\+D\+S\+\_\+\+Setup}}
+\index{D\+D\+S\+\_\+\+Setup@{D\+D\+S\+\_\+\+Setup}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Setup()}{DDS\_Setup()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Setup (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Driver\+\_\+\+Init D\+D\+S\+\_\+\+Setup This function must be called before the detection/decoding process starts, in order to initialize the detection driver internal variables correctly.
+
+D\+D\+S\+\_\+\+Setup 
+
+Definition at line 35 of file dds.\+c.
+
+
+
+References D\+D\+S\+\_\+\+Disable\+Decoder().
+
+
+
+Referenced by P\+T\+T\+Decoder\+\_\+\+Task().
+
+\mbox{\Hypertarget{group___d_d_s_ga391db24a133ffa19533b5845c365367d}\label{group___d_d_s_ga391db24a133ffa19533b5845c365367d}} 
+\index{D\+DS@{D\+DS}!D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout@{D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout}}
+\index{D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout@{D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout}!D\+DS@{D\+DS}}
+\subsubsection{\texorpdfstring{D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout()}{DDS\_Update\_Freq\_Timeout()}}
+{\footnotesize\ttfamily void D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+D\+D\+S\+\_\+\+Update\+\_\+\+Freq\+\_\+\+Timeout When previously assigned is replaced, it must leave space for the the new detected one. The previous decoding process must be stopped and its corresponding memory must be cleaned. The cleaning process will be performed during the Decoding\+\_\+\+Loop when the package is marked as P\+T\+T\+\_\+\+E\+R\+R\+OR.
+
+Definition at line 612 of file dds.\+c.
+
+
+
+Referenced by D\+D\+S\+\_\+\+Detection\+\_\+\+Loop().
+

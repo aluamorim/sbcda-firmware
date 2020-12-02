@@ -1,0 +1,223 @@
+\hypertarget{group___app___tasks}{}\section{App\+\_\+\+Tasks}
+\label{group___app___tasks}\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___app___tasks_gac9a578724e7472c16d1c3192bd544f98}{Command\+\_\+\+Parser\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gadf0ceb656d8916064e56e3ea4f1dba35}{House\+Keeping\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gadfbb515047e6c4c679611a5cc618b88c}{P\+T\+T\+Decoder\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_gaccb4dfb0018e43c3697d98f4198bb845}{A\+D\+C\+Sampler\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\item 
+void \hyperlink{group___app___tasks_ga85a0f311d8c7082245c3308cd9161e46}{Idle\+\_\+\+Task} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Dummy task created for checking if R\+T\+OS is alive. The task simple blink S\+F2 board L\+E\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Application Tasks 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___app___tasks_gaccb4dfb0018e43c3697d98f4198bb845}\label{group___app___tasks_gaccb4dfb0018e43c3697d98f4198bb845}} 
+\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}!A\+D\+C\+Sampler\+\_\+\+Task@{A\+D\+C\+Sampler\+\_\+\+Task}}
+\index{A\+D\+C\+Sampler\+\_\+\+Task@{A\+D\+C\+Sampler\+\_\+\+Task}!App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsubsection{\texorpdfstring{A\+D\+C\+Sampler\+\_\+\+Task()}{ADCSampler\_Task()}}
+{\footnotesize\ttfamily void A\+D\+C\+Sampler\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+A\+D\+C\+Sampler\+\_\+\+Task
+
+This task is responsible for collecting A\+DC Sampler windows (2048 adc samples) and storing them into the A\+DC Sampler Buffer. The A\+DC Sampler is high priority task, it can not be preempted while collecting a A\+DC window to avoid losing samples. It runs on a infinite loop alternating between two states\+:
+
+
+\begin{DoxyPre}
+\begin{DoxyItemize}
+\item ADC\_IDLE: the tasks suspends for 0,5s, allowing other tasks to run;
+\end{DoxyItemize}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\begin{DoxyItemize}
+\item ADC\_BUSY: the tasks collects 2048 samples from the ADC Sampler FIFO
+             in the Decoder Unit and stores them into a ADC Sampler Package.
+             After the reading is done the tasks automatically switches to
+             ADC\_IDLE state.
+ 
+   When the task is in ADC\_BUSY state it is not preempted,
+   therefore other critical process, such as the PTT Decoding Task,
+   must be suspended before the ADC Sampler switches to ADC\_BUSY. To
+   initiate an ADC window read operation the on-board computer must put the
+   firmware into Configuration Mode and then send the ADC\_LOAD command.
+   The task will be ADC\_BUSY state for roughly 16ms and then switch
+   back to ADC\_IDLE. The on-board computer must issue the
+   ADC\_STATE command to know when the ADC reading is finished.
+\end{DoxyItemize}\end{DoxyPre}
+
+
+
+\begin{DoxyPre}ADCSampler\_Task\end{DoxyPre}
+
+
+
+\begin{DoxyPre}It is responsible for collect ADC Sampler windows (2048 adc samples)
+and  storing them into the ADC Sampler Buffer. The ADC Sampler
+is high priority task, it  can not be preempted while collecting
+a ADC window to avoid losing samples.
+It runs on a infinite loop alternating between two states:\end{DoxyPre}
+
+
+
+\begin{DoxyPre}
+\begin{DoxyItemize}
+\item ADC\_IDLE: the tasks suspends for 0,5s, allowing other tasks to run;
+\item ADC\_BUSY: the tasks collects 2048 samples from the ADC Sampler FIFO
+            in the Decoder Unit and stores them into a ADC Sampler Package.
+            After the reading is done the tasks automatically switches to
+            ADC\_IDLE state.
+
+When the task is in ADC\_BUSY state it is not preempted,
+  therefore other critical process, such as the PTT Decoding Task,
+  must be suspended before the ADC Sampler switches to ADC\_BUSY. To
+  initiate an ADC window read operation the on-board computer must put the
+  firmware into Configuration Mode and then send the ADC\_LOAD command.
+  The task will be ADC\_BUSY state for roughly 16ms and then switch
+  back to ADC\_IDLE. The on-board computer must issue the
+  ADC\_STATE command to know when the ADC reading is finished.
+
+\end{DoxyItemize}\end{DoxyPre}
+
+
+Definition at line 43 of file adc\+\_\+task.\+c.
+
+
+
+Referenced by sbcda\+\_\+decoder\+\_\+app().
+
+\mbox{\Hypertarget{group___app___tasks_gac9a578724e7472c16d1c3192bd544f98}\label{group___app___tasks_gac9a578724e7472c16d1c3192bd544f98}} 
+\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}!Command\+\_\+\+Parser\+\_\+\+Task@{Command\+\_\+\+Parser\+\_\+\+Task}}
+\index{Command\+\_\+\+Parser\+\_\+\+Task@{Command\+\_\+\+Parser\+\_\+\+Task}!App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsubsection{\texorpdfstring{Command\+\_\+\+Parser\+\_\+\+Task()}{Command\_Parser\_Task()}}
+{\footnotesize\ttfamily void Command\+\_\+\+Parser\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Command\+\_\+\+Parser\+\_\+\+Task
+
+Task responsible for setting the current operation mode and its corresponding output package buffer. The Command Parser task is also responsible for executing configuration commands sent by the on-\/board computer. The result of each configuration command or request in configuration mode is a Configuration Data Package starting with the identifier byte 0x10. This task has low execution priority and can only run when the A\+D\+C\+Sampler\+\_\+\+Task and the P\+T\+T\+Decoder\+\_\+\+Task are suspended. This behavior gives a small window of time for the on-\/board computer execute configuration commands or request HK information. Therefore, the on board computer must always check the type of a received data package (first byte) to be sure of which operation mode is currently set.
+
+Command\+\_\+\+Parser\+\_\+\+Task 
+
+Definition at line 68 of file cmd\+\_\+task.\+c.
+
+
+
+References H\+K\+\_\+\+Get\+\_\+\+Buffer(), P\+T\+T\+\_\+\+Get\+Ready\+Fifo\+Output(), and P\+T\+T\+\_\+\+T\+O\+T\+A\+L\+\_\+\+R\+E\+C\+O\+R\+D\+\_\+\+S\+I\+ZE.
+
+
+
+Referenced by sbcda\+\_\+decoder\+\_\+app().
+
+\mbox{\Hypertarget{group___app___tasks_gadf0ceb656d8916064e56e3ea4f1dba35}\label{group___app___tasks_gadf0ceb656d8916064e56e3ea4f1dba35}} 
+\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}!House\+Keeping\+\_\+\+Task@{House\+Keeping\+\_\+\+Task}}
+\index{House\+Keeping\+\_\+\+Task@{House\+Keeping\+\_\+\+Task}!App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsubsection{\texorpdfstring{House\+Keeping\+\_\+\+Task()}{HouseKeeping\_Task()}}
+{\footnotesize\ttfamily void House\+Keeping\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+House\+Keeping\+\_\+\+Task
+
+This task constantly reads housekeeping information and keeps an updated Housekeeping Package. The collected information are defined by the Housekeeping \char`\"{}configuration
+  word.\char`\"{} The housekeeping information includes\+:
+
+1 -\/ R\+TC Current time tag; 2 -\/ A\+DC 7894 current R\+MS value; 3 -\/ Current sensors A and B updated values; 4 -\/ P\+LL Synchronization flag; 5 -\/ Over-\/current register flag;
+
+The HK info is stored into a single HK Package, provided by the HK Service Layer. All Housekeeping measures are enabled by default. If the on-\/board computer deactivates one or more HK measures, their corresponding space is simply filled with zeros. The configuration word masks defines which HK measure is enabled or not. It can be updated by the on-\/board computer using the H\+K\+\_\+\+C\+O\+N\+F\+IG command with the firmware in Configuration Mode. The configuration word is a 2-\/byte integer whose bits are mapped as follows\+:
+
+
+\begin{DoxyPre}
+    0   - RTC time tag
+    1   - Current sensors
+    2   - ADC RMS
+    3   - PLL Synch flag
+    4   - Over - current
+    5-15 - Reserved for future use
+*\end{DoxyPre}
+
+
+House\+Keeping\+\_\+\+Task
+
+This task constantly reads housekeeping information and keeps an updated Housekeeping Package. The collected information are defined by the Housekeeping \char`\"{}configuration
+word.\char`\"{} The housekeeping information includes\+:
+
+1 -\/ R\+TC Current time tag; 2 -\/ A\+DC 7894 current R\+MS value; 3 -\/ Current sensors A and B updated values; 4 -\/ P\+LL Synchronization flag; 5 -\/ Over-\/current register flag;
+
+The HK info is stored into a single HK Package, provided by the HK Service Layer. All Housekeeping measures are enabled by default. If the on-\/board computer deactivates one or more HK measures, their corresponding space is simply filled with zeros. The configuration word masks defines which HK measure is enabled or not. It can be updated by the on-\/board computer using the H\+K\+\_\+\+C\+O\+N\+F\+IG command with the firmware in Configuration Mode. The configuration word is a 2-\/byte integer whose bits are mapped as follows\+:
+
+0 -\/ R\+TC time tag 1 -\/ Current sensors 2 -\/ A\+DC R\+MS 3 -\/ P\+LL Synch flag 4 -\/ Over -\/ current 5-\/15 -\/ Reserved for future use 
+
+Definition at line 51 of file hkp\+\_\+task.\+c.
+
+
+
+References H\+K\+\_\+\+Get\+\_\+\+Buffer(), H\+K\+\_\+\+Get\+\_\+\+Config(), H\+K\+\_\+\+Get\+\_\+\+Refresh\+\_\+\+Time(), and H\+K\+\_\+\+Service\+\_\+\+Setup().
+
+
+
+Referenced by sbcda\+\_\+decoder\+\_\+app().
+
+\mbox{\Hypertarget{group___app___tasks_ga85a0f311d8c7082245c3308cd9161e46}\label{group___app___tasks_ga85a0f311d8c7082245c3308cd9161e46}} 
+\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}!Idle\+\_\+\+Task@{Idle\+\_\+\+Task}}
+\index{Idle\+\_\+\+Task@{Idle\+\_\+\+Task}!App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsubsection{\texorpdfstring{Idle\+\_\+\+Task()}{Idle\_Task()}}
+{\footnotesize\ttfamily void Idle\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Dummy task created for checking if R\+T\+OS is alive. The task simple blink S\+F2 board L\+E\+Ds. 
+
+Idle\+\_\+\+Task
+
+
+
+ \subsubsection*{Idle\+\_\+\+Task }
+
+\begin{DoxyVerb}Dummy task created for checking if RTOS is alive
+The task simple blink SF2 board LEDs.
+This task is responsible for reloading the WDT
+counter.\end{DoxyVerb}
+ 
+
+Definition at line 31 of file idle\+\_\+task.\+c.
+
+
+
+Referenced by sbcda\+\_\+decoder\+\_\+app().
+
+\mbox{\Hypertarget{group___app___tasks_gadfbb515047e6c4c679611a5cc618b88c}\label{group___app___tasks_gadfbb515047e6c4c679611a5cc618b88c}} 
+\index{App\+\_\+\+Tasks@{App\+\_\+\+Tasks}!P\+T\+T\+Decoder\+\_\+\+Task@{P\+T\+T\+Decoder\+\_\+\+Task}}
+\index{P\+T\+T\+Decoder\+\_\+\+Task@{P\+T\+T\+Decoder\+\_\+\+Task}!App\+\_\+\+Tasks@{App\+\_\+\+Tasks}}
+\subsubsection{\texorpdfstring{P\+T\+T\+Decoder\+\_\+\+Task()}{PTTDecoder\_Task()}}
+{\footnotesize\ttfamily void P\+T\+T\+Decoder\+\_\+\+Task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+P\+T\+T\+Decoder\+\_\+\+Task
+
+The P\+TT Decoding task is responsible for coordinating the decoding process of newly detected P\+TT signals, as much as building P\+TT Packages. It rellies on services provided by the P\+TT Service and the D\+DS Layers. The P\+TT task runs in cycles of 10 ms, called windows. During each window the task performs the following activities\+: 
+\begin{DoxyPre}
+  1.    Run a Detection Loop to identify new PTT signals;
+  2.    Send a Decoding Start Operation signal if there are any active decoders;
+  3.    Run a Decoding Loop, procedure that adds new decoded bits to the currently building PTT Packages;
+  4.    Check if the firmware has received a PTT\_POP command and, in this case, update the pointer of the PTT Packages FIFO  ;
+  5.    Wait until the next window starts.
+\end{DoxyPre}
+ Steps 1 to 3 are executed in high priority mode. The task cannot be preempted during these steps. Together they last about 4ms (40\% of the window time). During the remaining time, the P\+TT task runs in low priority mode, allowing other tasks to control the processor. An interrupt signal is generated on G\+P\+I\+O\+\_\+0 pin to trigger a new window. When this interruption is detected the system is forced to reenter the high priority state and restart the decoding process. The on-\/board computer can pause or resume the decoding process by using the P\+T\+T\+\_\+\+P\+A\+U\+SE and P\+T\+T\+\_\+\+R\+E\+S\+U\+ME commands in Configuration Mode. When the decoder is paused steps 1, 2 and 3 are not executed.
+
+P\+T\+T\+Decoder\+\_\+\+Task 
+
+Definition at line 39 of file ptt\+\_\+task.\+c.
+
+
+
+References D\+D\+S\+\_\+clear\+New\+Window\+Flag(), D\+D\+S\+\_\+\+Detection\+\_\+\+Loop(), D\+D\+S\+\_\+\+Enable\+Decoder(), D\+D\+S\+\_\+is\+New\+Window\+Ready(), D\+D\+S\+\_\+\+Setup(), P\+T\+T\+\_\+\+Service\+\_\+is\+Paused(), and P\+T\+T\+\_\+\+Service\+\_\+\+Setup().
+
+
+
+Referenced by sbcda\+\_\+decoder\+\_\+app().
+
